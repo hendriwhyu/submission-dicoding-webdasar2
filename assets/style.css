@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+nav {
+  background-color: rgb(241, 222, 201);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 55px;
+  padding-right: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links li a:hover {
+  text-decoration: none;
+  color: rgb(200, 182, 166);
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: rgb(141, 123, 104);
+  flex-wrap: wrap-reverse;
+}
+
+aside {
+  flex-basis: 30%;
+  align-content: center;
+}
+
+aside img {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+}
+
+.content {
+  flex-basis: 60%;
+  gap: 20px;
+}
+
+.content article {
+  flex-basis: 40%;
+}
+
+.content article:first-child {
+  margin-right: 20px;
+}
+
+.about {
+  max-width: 700px;
+  text-align: justify;
+  color: white;
+  margin-bottom: 20px;
+}
+.about .name {
+  margin-top: 12px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.about p {
+  margin-top: 10px;
+  line-height: 0.8cm;
+}
+
+.tech {
+  font-size: 22px;
+  color: white;
+}
+
+.stack {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  margin: 0 auto;
+  overflow: auto;
+  transition: transform 0.3s ease;
+  cursor: grab;
+  justify-content: start;
+  align-items: center;
+}
+
+.item {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.portfolio-row {
+  padding: 32px;
+  display: flex;
+  background: rgb(141, 123, 104);
+}
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  border-radius: 12px;
+  background-color: white;
+}
+.card img {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: rgb(241, 222, 201);
+  color: black;
+}
+.about-section h1 {
+  padding-bottom: 20px;
+}
+
+.container-project {
+  padding: 16px;
+}
+.container-project h2 {
+  margin-bottom: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: rgb(241, 222, 201);
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .logo {
+    margin: 20px 0;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .nav-links li {
+    margin: 5px 0;
+  }
+  .burger {
+    display: block;
+  }
+  .nav-active {
+    display: flex;
+    flex-direction: row;
+  }
+  .content {
+    max-width: -webkit-fill-available;
+    text-align: -webkit-center;
+  }
+
+  .content article {
+    margin-bottom: 20px;
+  }
+
+  .about {
+    text-align-last: center;
+  }
+
+  aside {
+    margin-top: 20px;
+  }
+  .stack {
+    display: flex;
+  }
+
+  .tech-stack {
+    flex-wrap: wrap;
+  }
+
+  .slider {
+    display: flex;
+    margin: 0 auto;
+  }
+  .tech-stack .stack-item {
+    width: 50%;
+    height: 50px;
+  }
+
+  .tech-stack .stack-item img {
+    height: 100%;
+  }
+
+  .portfolio-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .column {
+    width: 100%;
+  }
+}
